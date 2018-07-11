@@ -14,4 +14,4 @@ RUN yum -y update && yum -y install \
     findutils
 
 RUN pip install --upgrade pip \
-    --user --pre --upgrade suricata-update \
+   --pre --upgrade suricata-update \
