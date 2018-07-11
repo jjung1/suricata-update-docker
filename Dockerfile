@@ -2,8 +2,8 @@ FROM centos:latest
 MAINTAINER Ed Sealing <ed.sealing@sealingtech.org>
 
 # Installation
-RUN yum -y update && yum -y install \ 
-    epel-release \
+RUN yum -y install epel-release
+RUN yum -y update && yum -y install \
     git \
     python-yaml \
     python-pip \
@@ -13,5 +13,5 @@ RUN yum -y update && yum -y install \
     python34-pip \
     findutils
 
-
-RUN pip install --user --pre --upgrade suricata-update \
+RUN pip install --upgrade pip \
+    --user --pre --upgrade suricata-update \
